@@ -1,31 +1,43 @@
-#include <stdio.h>
-
-int main() {
-
-  char op;
-  double first, second;
-  printf("Enter an operator (+, -, *, /): ");
-  scanf("%c", &op);
-  printf("Enter two operands: ");
-  scanf("%lf %lf", &first, &second);
-
-  switch (op) {
-    case '+':
-      printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
-      break;
-    case '-':
-      printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
-      break;
-    case '*':
-      printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
-      break;
-    case '/':
-      printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
-      break;
-    // operator doesn't match any case constant
-    default:
-      printf("Error! operator is not correct");
-  }
-
-  return 0;
+#include<stdio.h>
+int main(){
+	char type;
+	float num1,num2,ans;
+	
+	printf("+ -addition\n- -subtraction\n* -multiplication\n/ -division\nEnter operation: ");
+	scanf("%c",&type);
+	
+	//calculating and displaying the answer according to the operation chose
+	
+	switch(type){
+		case'+':printf("Enter first number: ");
+				scanf("%f",&num1);
+				printf("Enter second number: ");
+				scanf("%f",&num2);
+				ans=num1+num2;
+				printf("%.2f",ans);
+				break;
+		case'-':printf("Enter first number: ");
+				scanf("%f",&num1);
+				printf("Enter second number: ");
+				scanf("%f",&num2);
+				ans=num1-num2;
+				printf("%.2f",ans);
+				break;
+		case'*':printf("Enter first number: ");
+				scanf("%f",&num1);
+				printf("Enter second number: ");
+				scanf("%f",&num2);
+				ans=num1*num2;
+				printf("%.2f",ans);
+				break;
+		case'/':printf("Enter first number: ");
+				scanf("%f",&num1);
+				printf("Enter second number: ");
+				scanf("%f",&num2);
+				ans=num1/num2;
+				printf("%.2f",ans);
+				break;
+		default:printf("Invalid operation");
+	}
+	return 0;
 }

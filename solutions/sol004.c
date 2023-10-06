@@ -1,17 +1,17 @@
 #include<stdio.h>
-
-int main ()
-{
-    // Defining function
-    int n;
-    printf("Enter an integer n of your choice:");
-    scanf("%d", &n);
-
-    // Writing formula to calculate the sum of first n natural number
-    int sum = ( n * ( n + 1)) / 2;
-
-    //Printing result
-    printf("Sum of the first %d natural numbers is %d\n", n, sum);
-
-    return 0;
+int main(){
+	int year;
+	printf("Enter year: ");
+	scanf("%d",&year);
+	
+	//determinig whether the year took as input is a leap year or not
+	
+	if(year%4==0){
+		printf("It is a leap year");
+	}else if(year%4!=0){
+		printf("It is not a leap year");
+	}else{
+		printf("Invalid input");
+	}
+	return 0;
 }
